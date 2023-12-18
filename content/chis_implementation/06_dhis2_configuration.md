@@ -13,7 +13,7 @@ The process of designing a CHIS in DHIS2 is composed of a nine step process.
 
 The worst configuration of a CHIS in DHIS2 is typically where the current community health program business processes are simply digitized into DHIS2 without any modifications to optimize them. To avoid this mistake the first step to designing a well-functioning CHIS in DHIS2 to perform a thorough mapping of the current state of the community health program M&E data flow. The principal goal of mapping the current state are to:
 
-1. Harmonize CHW reporting tool into as few as possible (1 or 2).
+1. Harmonize CHW reporting tool into as few as possible 
 2. Standardized the harmonized reporting tools across the whole country.
 3. Identify what is working well.
 4. Identify what is not working well and how it could be improved.
@@ -39,29 +39,23 @@ There are essentially two steps to mapping the current business process.
 
 ### 2. Considerations in Translating Business Process to DHIS2
 
-Translating the data flows of community in DHIS2 is the most crucial step in the design process. There are nine critical elements that must be considered. These are:
+The following should be considere din the early design phases for integration of CHW reporting into DHIS2 and into national HIS architectures: 
 
-1. Logic of data aggregation
-2. Reporting periods and frequency
-3. Organizational hierarchy
-4. Vertical health programs vis-à-vis HMIS
-5. Partner reporting
-6. Outputs: Internal and External
-7. Infrastructure considerations
-8. Technology considerations for data acquisition = tool selection
-9. Security
+1. Reporting structures and frequency 
+2. Organizational hierarchy
+3. Vertical disease programs vs. integrated reporting 
+4. Reporting from implementing partners & other sources
+5. Infrastructure considerations
+6. Technology considerations & devices
+7. Security
 
-#### Logic of Data Aggregation 
+#### Integrating CHW data with HMIS
 
 **Extending from the existing facility system** to community health workers needs to ensure that the logic for data aggregation stays synchronized within the existing CHIS. While designing the aggregation, there could be five typical scenarios.
 
 1. **CHW Aggregate data reporting**: If aggregate data is being collected at facility level, and CHWs are also submitting aggregate numbers, the summed value of facility and CHW needs to represent a meaningful figure. For example:
 	- Case 1 - CHWs is solely responsible for reporting on all pregnant women registered for ANC in the area. This data element should be reported by all CHWs and its aggregate should be taken as facility reported number: i.e. Number of pregnant women registered for ANC at facility = CHW1+ CHW2 ...
 	- Case 2 - In case CHWs are to report on this data element of community services and the facility is also providing similar services, then the total count of services provided is the sum of CHWs + facility: i.e. Number of pregnant women registered for ANC = facility + CHW1+ CHW2 ...
-
-    > **Note**
-    > 
-    > It is generally considered a best practice to have separate data sets for facilities and CHWs. Meaning, the CHW should not be submitting data via the facility data set. This is to minimize potential for double counting of patient between facility and CHW, and it enables better performance monitoring of CHWs and facilities.
 
 2. **Case based (tracker) data reporting where case location is [not]{.ul} important**: In case aggregate data is being collected at facility and CHWs are to collect name/case based data for the same, in such case aggregation of all case/names should be done at facility level. Meaning cases should be enrolled as tracked entities against the facility even if CHWs are capturing the data.
 
